@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Designer — Конструктор Ідеальних Подарунків</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 4. Липка шапка (Sticky Header з Корзиною Обраного) -->
+    <header class="sticky-header">
+        <nav class="nav-container">
+            <a href="#hero" class="brand-logo">
+                <span>🎁</span> Gift Designer
+            </a>
+            <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Відкрити меню">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link">Головна</a></li>
+                <li><a href="#benefits" class="nav-link">Переваги</a></li>
+                <li><a href="#how-it-works" class="nav-link">Як це працює</a></li>
+                <li><a href="#interests" class="nav-link">Ідеї за хобі</a></li>
+                <li><a href="#where-to-buy" class="nav-link">Де купити</a></li>
+                <li><a href="#gift-catalog" class="nav-link">Каталог</a></li>
+                <li><a href="#gift-admin" class="nav-link">Адмін-панель</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+                <li><a href="#wishlist" class="nav-link" style="color: #fda4af;">❤️ Обране (<span
+                            id="wishlistNavCount">0</span>)</a></li>
+                <li><a href="#generator" class="nav-link nav-cta">✨ Почати підбір</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container" style="margin-top: 1rem;">
+
+        <!-- 1. Секція Hero -->
+        <section class="hero-section" id="hero">
+            <div class="logo-badge">✨ Твій розумний помічник у світі свят</div>
+            <h1>Знайди ідеальний подарунок за 10 секунд</h1>
+            <p>Персоналізований підбір подарунків для будь-якої людини, події, хобі та бюджету.</p>
+
+            <!-- Відповіді на 3 головні питання -->
+            <div class="hero-answers-grid">
+                <div class="hero-answer-card">
+                    <h4><span>❓</span> Що це за сайт?</h4>
+                    <p>Інтерактивний онлайн-конструктор, який миттєво підбирає влучні ідеї подарунків за розумним
+                        алгоритмом.</p>
+                </div>
+                <div class="hero-answer-card">
+                    <h4><span>💡</span> Чому це корисно мені?</h4>
+                    <p>Заощаджує години марного пошуку в магазинах. Враховує ваші фінансові рамки, захоплення та
+                        особистість отримувача.</p>
+                </div>
+                <div class="hero-answer-card">
+                    <h4><span>🚀</span> Що зробити далі?</h4>
+                    <p>Натисніть «Почати підбір», заповніть параметри або оберіть хобі та отримайте 4 спеціалізовані
+                        рекомендації!</p>
+                </div>
+            </div>
+
+            <div class="hero-actions">
+                <a href="#generator" class="btn-hero-primary">✨ Почати підбір подарунка</a>
+                <a href="#interests" class="btn-hero-secondary">🎯 Переглянути за інтересами</a>
+            </div>
+        </section>
+
+        <!-- 8. Переваги сайту -->
+        <section id="benefits" style="scroll-margin-top: 80px;">
+            <div class="section-header">
+                <span class="section-tag">Чому ми</span>
+                <h2 class="section-title">Переваги сервісу Gift Designer</h2>
+                <p class="section-desc">Чому користувачі обирають наш конструктор замість звичайного пошуку</p>
+            </div>
+            <div class="grid-3">
+                <div class="equal-card">
+                    <div>
+                        <div class="benefit-icon">⏱️</div>
+                        <h3 class="benefit-title">Економить ваш час</h3>
+                        <p class="benefit-text">Забудьте про багатогодинне гортання каталогів. Алгоритм видає найкращі
+                            ідеї за лічені секунди.</p>
+                    </div>
+                </div>
+                <div class="equal-card">
+                    <div>
+                        <div class="benefit-icon">🎯</div>
+                        <h3 class="benefit-title">Точно за хобі та інтересами</h3>
+                        <p class="benefit-text">Враховує конкретні захоплення (спорт, геймінг, читання, кулінарію,
+                            подорожі, арт) для влучного дарунка.</p>
+                    </div>
+                </div>
+                <div class="equal-card">
+                    <div>
+                        <div class="benefit-icon">💰</div>
+                        <h3 class="benefit-title">Варіанти під будь-який бюджет</h3>
+                        <p class="benefit-text">Від символічних та затишних сувенірів від 100 грн до розкішних
+                            преміальних вражень.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. «Як це працює» -->
+        <section id="how-it-works" style="scroll-margin-top: 80px;">
+            <div class="section-header">
+                <span class="section-tag">Простий процес</span>
+                <h2 class="section-title">Як це працює</h2>
+                <p class="section-desc">Всього 4 прості кроки до ідеального презенту</p>
+            </div>
+            <div class="grid-4">
+                <div class="equal-card step-card">
+                    <span class="step-number">1</span>
+                    <h3 class="step-title">Обери, кому подарунок</h3>
+                    <p class="step-desc">Вкажи отримувача: другу, коханій людині, колезі, родичу або дитині.</p>
+                </div>
+                <div class="equal-card step-card">
+                    <span class="step-number">2</span>
+                    <h3 class="step-title">Вкажи хобі та бюджет</h3>
+                    <p class="step-desc">Зазнач захоплення людини, привід та комфортну суму у гривнях.</p>
+                </div>
+                <div class="equal-card step-card">
+                    <span class="step-number">3</span>
+                    <h3 class="step-title">Отримай 4 варіанти ідей</h3>
+                    <p class="step-desc">Отримай миттєву добірку з 4 унікальних варіантів подарунків саме під обране
+                        хобі.</p>
+                </div>
+                <div class="equal-card step-card">
+                    <span class="step-number">4</span>
+                    <h3 class="step-title">Збережи в обране & купуй</h3>
+                    <p class="step-desc">Зберігай ідеї в корзину обраного та переходь до перевірених магазинів.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Подарунки за інтересами (З точним фільтром під кожне хобі!) -->
+        <section id="interests" style="scroll-margin-top: 80px;">
+            <div class="section-header">
+                <span class="section-tag">Категорії Хобі</span>
+                <h2 class="section-title">Подарунки за інтересами</h2>
+                <p class="section-desc">Натисніть на хобі — і отримаєте 4 спеціалізовані ідеї подарунків саме для цього
+                    захоплення</p>
+            </div>
+            <div class="grid-6">
+                <div class="equal-card">
+                    <div>
+                        <div class="interest-icon">🏋️‍♂️</div>
+                        <h3 class="interest-title">Для спортсмена</h3>
+                        <p class="interest-desc">Фітнес-браслети, масажні пістолети, шейкери, еспандери та спортивні
+                            навушники.</p>
+                    </div>
+                    <button class="btn-interest-select" onclick="selectInterestCategory('athlete')">🏋️‍♂️ Подарунки для
+                        спортсмена</button>
+                </div>
+                <div class="equal-card">
+                    <div>
+                        <div class="interest-icon">🎮</div>
+                        <h3 class="interest-title">Для геймера</h3>
+                        <p class="interest-desc">Ігрові миші, геймпади, підписки Game Pass, RGB-підсвітку та гарнітури
+                            7.1.</p>
+                    </div>
+                    <button class="btn-interest-select" onclick="selectInterestCategory('gamer')">🎮 Подарунки для
+                        геймера</button>
+                </div>
+                <div class="equal-card">
+                    <div>
+                        <div class="interest-icon">📚</div>
+                        <h3 class="interest-title">Для книголюба</h3>
+                        <p class="interest-desc">Електронні книги, бестселери у твердій обкладинці, затишні свічки та
+                            LED-лампи.</p>
+                    </div>
+                    <button class="btn-interest-select" onclick="selectInterestCategory('bookworm')">📚 Подарунки для
+                        книголюба</button>
+                </div>
+                <div class="equal-card">
+                    <div>
+                        <div class="interest-icon">🍳</div>
+                        <h3 class="interest-title">Для кулінара</h3>
+                        <p class="interest-desc">Набори спецій світу, шеф-ножі з дамаської сталі, су-від девайси та
+                            аерогрилі.</p>
+                    </div>
+                    <button class="btn-interest-select" onclick="selectInterestCategory('cook')">🍳 Подарунки для
+                        кулінара</button>
+                </div>
+                <div class="equal-card">
+                    <div>
+                        <div class="interest-icon">🧳</div>
+                        <h3 class="interest-title">Для мандрівника</h3>
+                        <p class="interest-desc">Тревел-органайзери, вакуумні термоси, скреч-карти світу та PowerBank на
+                            20000 mAh.</p>
+                    </div>
+                    <button class="btn-interest-select" onclick="selectInterestCategory('traveler')">🧳 Подарунки для
+                        мандрівника</button>
+                </div>
+                <div class="equal-card">
+                    <div>
+                        <div class="interest-icon">🎨</div>
+                        <h3 class="interest-title">Для творчої людини</h3>
+                        <p class="interest-desc">Художні маркери Touch, мольберти, графічні планшети та набори фарб.</p>
+                    </div>
+                    <button class="btn-interest-select" onclick="selectInterestCategory('artist')">🎨 Подарунки для
+                        творця</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок Генератора з Формою та 4 Варіантами -->
+        <section id="generator" style="scroll-margin-top: 80px;">
+            <div class="section-header">
+                <span class="section-tag">Інтерактивний Конструктор</span>
+                <h2 class="section-title">Підбір подарунка</h2>
+                <p class="section-desc">Оберіть отримувача, хобі та бюджет — і отримайте 4 спеціалізовані варіанти</p>
+            </div>
+
+            <!-- Form Card -->
+            <main class="card">
+                <form id="giftForm" novalidate>
+                    <!-- Error Banner State -->
+                    <div class="error-banner" id="errorBanner" role="alert">
+                        <span>⚠️</span>
+                        <span>Будь ласка, заповніть обов'язкові поля (Отримувач, Привід та Бюджет).</span>
+                    </div>
+
+                    <!-- Recipient Field -->
+                    <div class="form-group">
+                        <label for="recipient">👤 Отримувач *</label>
+                        <select id="recipient" name="recipient" required aria-required="true">
+                            <option value="" disabled selected>Оберіть кому призначений подарунок...</option>
+                            <option value="friend">👨‍💻 Другу / Подрузі</option>
+                            <option value="partner">❤️ Коханій людині (Парі)</option>
+                            <option value="relative">👨‍👩‍👧 Близькому родичу (Батькам / Сестрі / Брату)</option>
+                            <option value="colleague">💼 Колезі / Керівнику</option>
+                            <option value="kid">👶 Дитині / Підлітку</option>
+                        </select>
+                        <span class="field-error" id="recipientError">Оберіть отримувача зі списку</span>
+                    </div>
+
+                    <!-- Hobby / Interest Field (Спеціалізований вибір Хобі!) -->
+                    <div class="form-group">
+                        <label for="hobby">🎯 Інтерес / Хобі людини</label>
+                        <select id="hobby" name="hobby">
+                            <option value="" selected>Будь-яке хобі / Універсальний підбір</option>
+                            <option value="athlete">🏋️‍♂️ Спорт, фітнес та активний відпочинок</option>
+                            <option value="gamer">🎮 Геймінг, кіберспорт та гаджети</option>
+                            <option value="bookworm">📚 Читання, книги та саморозвиток</option>
+                            <option value="cook">🍳 Кулінарія, готування та кухонні девайси</option>
+                            <option value="traveler">🧳 Подорожі, туризм та походи</option>
+                            <option value="artist">🎨 Творчість, малювання, арт та хендмейд</option>
+                        </select>
+                    </div>
+
+                    <!-- Event Field -->
+                    <div class="form-group">
+                        <label for="event">🎉 Подія / Привід *</label>
+                        <select id="event" name="event" required aria-required="true">
+                            <option value="" disabled selected>Оберіть привід...</option>
+                            <option value="birthday">🎂 День народження</option>
+                            <option value="newyear">🎄 Новий рік / Різдво</option>
+                            <option value="anniversary">💍 Річниця / Весілля</option>
+                            <option value="professional">🎓 Професійне свято / Випускний</option>
+                            <option value="justbecause">✨ Без приводу (Просто так)</option>
+                        </select>
+                        <span class="field-error" id="eventError">Оберіть подію зі списку</span>
+                    </div>
+
+                    <!-- Budget Field -->
+                    <div class="form-group">
+                        <label for="budget">₴ Бюджет (грн) *</label>
+                        <input type="number" id="budget" name="budget" placeholder="Наприклад: 1000" min="100"
+                            max="100000" step="50" required aria-required="true">
+                        <span class="field-error" id="budgetError">Вкажіть бюджет (мінімум 100 грн)</span>
+                    </div>
+
+                    <!-- Action Button -->
+                    <button type="submit" class="btn-submit" id="submitBtn">
+                        <span>✨ Зібрати 4 подарунки</span>
+                    </button>
+                </form>
+            </main>
+
+            <!-- Result / Output Section (4 Gift Cards Grid) -->
+            <div class="result-area" style="margin-top: 1.5rem;">
+                <!-- State 1: Empty Screen -->
+                <div class="state-empty" id="emptyState">
+                    <div class="state-empty-icon">🎁</div>
+                    <h3>Добірка з 4 подарунків з'явиться тут</h3>
+                    <p>Оберіть хобі вище або заповніть форму та натисніть "Зібрати 4 подарунки"</p>
+                </div>
+
+                <!-- State 2: Active Results (4 cards grid) -->
+                <div id="resultsContainer" style="display: none;">
+                    <div class="gift-results-grid" id="giftResultsGrid">
+                        <!-- Cards dynamically injected here -->
+                    </div>
+
+                    <div style="text-align: center;">
+                        <button class="btn-reload" id="reloadVariantBtn" type="button">
+                            <span>🔄 Показати інші 4 варіанти</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Секція Корзини Обраних Подарунків (Wishlist / localStorage) -->
+        <section id="wishlist" class="wishlist-section" style="scroll-margin-top: 80px; margin-top: 2rem;">
+            <div class="wishlist-header">
+                <div class="wishlist-title-box">
+                    <span style="font-size: 1.8rem;">❤️</span>
+                    <div>
+                        <h2 style="font-size: 1.4rem; color: #ffffff; margin: 0;">Обрані подарунки (Корзина)</h2>
+                        <p style="color: var(--text-muted); font-size: 0.88rem; margin-top: 0.2rem;">
+                            Збережені подарунки залишаються навіть після оновлення сторінки!
+                        </p>
+                    </div>
+                </div>
+                <button class="btn-clear-wishlist" id="clearWishlistBtn" onclick="clearAllWishlist()">🗑️ Очистити
+                    все</button>
+            </div>
+
+            <div id="wishlistGrid" class="gift-results-grid">
+                <!-- Saved items rendered here -->
+            </div>
+
+            <div class="wishlist-empty" id="wishlistEmptyState">
+                <div class="wishlist-empty-icon">💔</div>
+                <h4 style="color: #ffffff; margin-bottom: 0.4rem;">Ваша корзина порожня</h4>
+                <p>Натискайте кнопкy «❤️ Зберегти в обране» на будь-якій картці подарунка, щоб зберегти її сюди.</p>
+            </div>
+        </section>
+
+        <!-- 2. Секція «Де купити» (Where to buy) -->
+        <section id="where-to-buy" style="scroll-margin-top: 80px;">
+            <div class="section-header">
+                <span class="section-tag">Магазини та сервіси</span>
+                <h2 class="section-title">Де купити рекомендовані подарунки</h2>
+                <p class="section-desc">Обирайте перевірені майданчики з швидкою доставкою або зручним самовивозом</p>
+            </div>
+
+            <!-- Фільтри магазинів -->
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">Всі магазини</button>
+                <button class="filter-btn" data-filter="online">🌐 Онлайн-магазини</button>
+                <button class="filter-btn" data-filter="offline">🏬 Офлайн-мережі</button>
+                <button class="filter-btn" data-filter="ua">🇺🇦 Україна</button>
+                <button class="filter-btn" data-filter="delivery">🚚 Доставка / Самовивіз</button>
+            </div>
+
+            <!-- Картки магазинів (Картки однакової висоти) -->
+            <div class="grid-6" id="storesGrid">
+                <!-- Store 1 -->
+                <div class="store-card store-item" data-category="online ua delivery">
+                    <div>
+                        <div class="store-header">
+                            <div class="store-logo">🛒</div>
+                            <h3 class="store-name">Rozetka</h3>
+                        </div>
+                        <p class="store-desc">Найбільший маркетплейс України: техніка, книги, іграшки, косметичні та
+                            подарункові набори.</p>
+                        <div class="store-tags">
+                            <span class="store-tag">Онлайн</span>
+                            <span class="store-tag">Україна</span>
+                            <span class="store-tag">Доставка & Самовивіз</span>
+                        </div>
+                    </div>
+                    <div class="store-actions">
+                        <a href="https://rozetka.com.ua" target="_blank" rel="noopener noreferrer"
+                            class="btn-store btn-store-primary">🌐 Перейти на сайт</a>
+                        <a href="https://rozetka.com.ua" target="_blank" rel="noopener noreferrer"
+                            class="btn-store btn-store-secondary">🏷️ Дивитися ціни</a>
+                        <a href="https://rozetka.com.ua/shops/" target="_blank" rel="noopener noreferrer"
+                            class="btn-store btn-store-outline">📍 Знайти найближчий магазин</a>
+                    </div>
+                </div>
+
+                <!-- Store 2 -->
+                <div class="store-card store-item" data-category="online ua delivery">
+                    <div>
+                        <div class="store-header">
+                            <div class="store-logo">💄</div>
+                            <h3 class="store-name">MakeUp</h3>
+                        </div>
+                        <p class="store-desc">Головний б'юті-маркетплейс: парфумерія, доглядові сети, спа-косметика та
+                            подарункові бокси.</p>
+                        <div class="store-tags">
+                            <span class="store-tag">Онлайн</span>
+                            <span class="store-tag">Україна</span>
+                            <span class="store-tag">Безкоштовна доставка</span>
+                        </div>
+                    </div>
+                    <div class="store-actions">
+                        <a href="https://makeup.com.ua" target="_blank" rel="noopener noreferrer"
+                            class="btn-store btn-store-primary">🌐 Перейти на сайт</a>
+                        <a href="https://makeup.com.ua" target="_blank" rel="noopener noreferrer"
+                            class="btn-store btn-store-secondary">🏷️ Дивитися ціни</a>
+                        <a href="https://makeup.com.ua" target="_blank" rel="noopener noreferrer"
+                            class="btn-store btn-store-outline">📍 Пункти видачі</a>
+                    </div>
+                </div>
+
+                <!-- Store 3 -->
+                <div class="store-card store-item" data-category="online offline ua delivery">
+                    <div>
+                        <div class="store-header">
+                            <div class="store-logo">📚</div>
+                            <h3 class="store-name">Yakaboo / Книгарня Є</h3>
+                        </div>
+                        <p class="store-desc">Сучасні книжкові мережі: колекційні видання, комікси, настільні ігри та
+                            канцелярські сувеніри.</p>
+                        <div class="store-tags">
+                            <span class="store-tag">Онлайн & Офлайн</span>
+                            <span class="store-tag">Україна</span>
+                            <span class="store-tag">Кур'єр & Самовивіз</span>
+                        </div>
+                    </div>
+                    <div class="store-actions">
+                        <a href="https://www.yakaboo.ua" target="_blank" rel="noopener noreferrer"
+                            class="btn-store btn-store-primary">🌐 Перейти на сайт</a>
+                        <a href="https://www.yakaboo.ua" target="_blank" rel="noopener noreferrer"
+                            class="btn-store btn-store-secondary">🏷️ Дивитися ціни</a>
+                        <a href="https://book-ye.com.ua" target="_blank" rel="noopener noreferrer"
+                            class="btn-store btn-store-outline">📍 Знайти книгарню</a>
+                    </div>
+                </div>
+
+                <!-- Store 4 -->
+                <div class="store-card store-item" data-category="online offline ua delivery">
+                    <div>
+                        <div class="store-header">
+                            <div class="store-logo">⚡</div>
+                            <h3 class="store-name">Цитрус / Алло</h3>
+                        </div>
+                        <p class="store-desc">Гаджети, смарт-годинники, бездротові навушники, портативна акустика та
+                            ігрові консолі.</p>
+                        <div class="store-tags">
+                            <span class="store-tag">Онлайн & Офлайн</span>
+                            <span class="store-tag">Україна</span>
+                            <span class="store-tag">Експрес-доставка</span>
+                        </div>
+                    </div>
+                    <div class="store-actions">
+                        <a href="https://www.citrus.ua" target="_blank" rel="noopener noreferrer"
+                            class="btn-store btn-store-primary">🌐 Перейти на сайт</a>
+                        <a href="https://www.citrus.ua" target="_blank" rel="noopener noreferrer"
+                            class="btn-store btn-store-secondary">🏷️ Дивитися ціни</a>
+                        <a href="https://www.citrus.ua/stores/" target="_blank" rel="noopener noreferrer"
+                            class="btn-store btn-store-outline">📍 Знайти шоурум</a>
+                    </div>
+                </div>
+
+                <!-- Store 5 -->
+                <div class="store-card store-item" data-category="online ua delivery">
+                    <div>
+                        <div class="store-header">
+                            <div class="store-logo">🎨</div>
+                            <h3 class="store-name">Prom.ua (Крафт)</h3>
+                        </div>
+                        <p class="store-desc">Маркетплейс авторських подарунків ручної роботи, персоналізованих
+                            дерев'яних та шкіряних сувенірів.</p>
+                        <div class="store-tags">
+                            <span class="store-tag">Онлайн</span>
+                            <span class="store-tag">Україна</span>
+                            <span class="store-tag">Поштове відділення</span>
+                        </div>
+                    </div>
+                    <div class="store-actions">
+                        <a href="https://prom.ua" target="_blank" rel="noopener noreferrer"
+                            class="btn-store btn-store-primary">🌐 Перейти на сайт</a>
+                        <a href="https://prom.ua" target="_blank" rel="noopener noreferrer"
+                            class="btn-store btn-store-secondary">🏷️ Дивитися ціни</a>
+                        <a href="https://prom.ua" target="_blank" rel="noopener noreferrer"
+                            class="btn-store btn-store-outline">📍 Поштові пункти</a>
+                    </div>
+                </div>
+
+                <!-- Store 6 -->
+                <div class="store-card store-item" data-category="online offline ua delivery">
+                    <div>
+                        <div class="store-header">
+                            <div class="store-logo">🎟️</div>
+                            <h3 class="store-name">Bodo (Враження)</h3>
+                        </div>
+                        <p class="store-desc">Сертифікати на незабутні емоції: SPA-процедури, дегустації, романтичні
+                            вікенди та польоти.</p>
+                        <div class="store-tags">
+                            <span class="store-tag">Онлайн & Офлайн</span>
+                            <span class="store-tag">Україна</span>
+                            <span class="store-tag">E-Mail & Подарункова коробочка</span>
+                        </div>
+                    </div>
+                    <div class="store-actions">
+                        <a href="https://www.bodo.ua" target="_blank" rel="noopener noreferrer"
+                            class="btn-store btn-store-primary">🌐 Перейти на сайт</a>
+                        <a href="https://www.bodo.ua" target="_blank" rel="noopener noreferrer"
+                            class="btn-store btn-store-secondary">🏷️ Дивитися ціни</a>
+                        <a href="https://www.bodo.ua/ua/points/" target="_blank" rel="noopener noreferrer"
+                            class="btn-store btn-store-outline">📍 ТРЦ точки продажів</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Секція FAQ (Frequently Asked Questions - Акордеон) -->
+        <section id="faq" style="scroll-margin-top: 80px;">
+            <div class="section-header">
+                <span class="section-tag">Відповіді на запитання</span>
+                <h2 class="section-title">Часті питання (FAQ)</h2>
+                <p class="section-desc">Все, що вас може цікавити про роботу конструктора подарунків</p>
+            </div>
+
+            <div class="faq-list">
+                <!-- Question 1 -->
+                <details class="faq-item">
+                    <summary class="faq-summary">
+                        <span>Як працює конструктор подарунків?</span>
+                        <span class="faq-icon">▼</span>
+                    </summary>
+                    <div class="faq-content">
+                        Наш алгоритм аналізує вказані вами параметри (кому призначений подарунок, привід, хобі та
+                        запланований бюджет) і співвідносить їх із регулярно оновлюваною базою даних найкращих ідей. В
+                        результаті ви отримуєте добірку з 4 персоналізованих варіантів.
+                    </div>
+                </details>
+
+                <!-- Question 2 -->
+                <details class="faq-item">
+                    <summary class="faq-summary">
+                        <span>Чи безкоштовний підбір подарунка?</span>
+                        <span class="faq-icon">▼</span>
+                    </summary>
+                    <div class="faq-content">
+                        Так, сервіс Gift Designer є на 100% безкоштовним для користувачів. Ви можете випробовувати різні
+                        комбінації та підбирати варіанти необмежену кількість разів.
+                    </div>
+                </details>
+
+                <!-- Question 3 -->
+                <details class="faq-item">
+                    <summary class="faq-summary">
+                        <span>Чи можна зберегти обраний подарунок?</span>
+                        <span class="faq-icon">▼</span>
+                    </summary>
+                    <div class="faq-content">
+                        Звісно! Біля кожної картки подарунка є кнопка «❤️ Зберегти в обране». Збережені ідеї автоматично
+                        записуються в пам'ять вашого браузера (localStorage) та залишаються в секції «Обрані подарунки»
+                        навіть при оновленні сторінки.
+                    </div>
+                </details>
+
+                <!-- Question 4 -->
+                <details class="faq-item">
+                    <summary class="faq-summary">
+                        <span>Якщо я не знаю інтереси людини, що робити?</span>
+                        <span class="faq-icon">▼</span>
+                    </summary>
+                    <div class="faq-content">
+                        У такому разі обирайте поле Хобі як «Будь-яке хобі / Універсально». Конструктор запропонує
+                        безпечні класичні ідеї (затишні набори, універсальні гаджети або сертифікати), які точно
+                        сподобаються кожному.
+                    </div>
+                </details>
+
+                <!-- Question 5 -->
+                <details class="faq-item">
+                    <summary class="faq-summary">
+                        <span>Де можна купити рекомендовані подарунки?</span>
+                        <span class="faq-icon">▼</span>
+                    </summary>
+                    <div class="faq-content">
+                        У спеціальній секції «Де купити» на цьому ж сайті зібрано перевірені українські та міжнародні
+                        магазини (Rozetka, MakeUp, Yakaboo, Цитрус, Bodo). Ви можете одразу перейти на потрібний сайт
+                        або перевірити ціну.
+                    </div>
+                </details>
+
+                <!-- Question 6 -->
+                <details class="faq-item">
+                    <summary class="faq-summary">
+                        <span>Чи є ідеї для різного бюджету?</span>
+                        <span class="faq-icon">▼</span>
+                    </summary>
+                    <div class="faq-content">
+                        Так! Конструктор покриває будь-який діапазон цін — від 100 грн для невеликих душевних знаків
+                        уваги до 100 000+ грн для розкішних дарунків, техніки та романтичних SPA-вікендів.
+                    </div>
+                </details>
+            </div>
+        </section>
+
+
+        <!-- Каталог подарунків, синхронізований з адмін-панеллю -->
+        <section id="gift-catalog" style="scroll-margin-top:90px;">
+            <div class="section-header">
+                <span class="section-tag">Каталог</span>
+                <h2 class="section-title">Каталог подарунків</h2>
+                <p class="section-desc">Актуальний список подарунків з цінами. Зміни в адмін-панелі відображаються тут одразу.</p>
+            </div>
+            <div id="publicGiftCatalog" class="gift-results-grid" aria-live="polite"></div>
+        </section>
+
+        <!-- Адміністративна панель -->
+        <section id="gift-admin" style="scroll-margin-top:90px;">
+            <div class="section-header">
+                <span class="section-tag">Керування</span>
+                <h2 class="section-title">Адмін-панель подарунків</h2>
+                <p class="section-desc">Додавайте, редагуйте та видаляйте позиції каталогу. Дані зберігаються в цьому браузері.</p>
+            </div>
+            <div class="card admin-card">
+                <form id="adminGiftForm" novalidate>
+                    <input type="hidden" id="adminGiftId">
+                    <div class="form-group">
+                        <label for="adminGiftTitle">Назва подарунка *</label>
+                        <input id="adminGiftTitle" type="text" maxlength="180" placeholder="Наприклад, Подарунковий набір" autocomplete="off" aria-describedby="adminTitleError">
+                        <span class="field-error" id="adminTitleError" role="alert"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="adminGiftPrice">Ціна (грн) *</label>
+                        <input id="adminGiftPrice" type="number" min="0" step="0.01" placeholder="Наприклад, 850" aria-describedby="adminPriceError">
+                        <span class="field-error" id="adminPriceError" role="alert"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="adminGiftDescription">Опис (необов’язково)</label>
+                        <input id="adminGiftDescription" type="text" maxlength="300" placeholder="Короткий опис подарунка">
+                    </div>
+                    <div class="form-group">
+                        <label for="adminGiftCategory">Категорія (необов’язково)</label>
+                        <input id="adminGiftCategory" type="text" maxlength="80" placeholder="Наприклад, Аксесуари">
+                    </div>
+                    <div id="adminFormMessage" class="admin-message" role="status" aria-live="polite"></div>
+                    <div class="admin-form-actions">
+                        <button class="btn-submit" id="adminSaveButton" type="submit">＋ Додати подарунок</button>
+                        <button class="btn-reload" id="adminCancelEdit" type="button" hidden>Скасувати редагування</button>
+                    </div>
+                </form>
+            </div>
+            <div class="card admin-list-card">
+                <div class="admin-list-heading">
+                    <h3>Усі подарунки</h3>
+                    <span id="adminGiftCount" class="gift-badge">0 позицій</span>
+                </div>
+                <div id="adminGiftList" class="admin-gift-list" aria-live="polite"></div>
+            </div>
+        </section>
+    </div> <!-- /container -->
+
+    <!-- 2. Розширений Преміальний Футер -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#hero" class="brand-logo">
+                        <span>🎁</span> Gift Designer
+                    </a>
+                    <p class="footer-desc">
+                        Інтелектуальний онлайн-сервіс підбору ідеальних подарунків за хобі. Заощаджуйте час, обирайте
+                        найкраще та даруйте незабутні щирі емоції!
+                    </p>
+                    <div class="footer-status">
+                        <span class="status-dot"></span> База хобі підключена • 24/7
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Навігація</h4>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Головна</a></li>
+                        <li><a href="#benefits">Переваги</a></li>
+                        <li><a href="#how-it-works">Як це працює</a></li>
+                        <li><a href="#generator">Конструктор подарунків</a></li>
+                        <li><a href="#where-to-buy">Де купити</a></li>
+                        <li><a href="#faq">Часті питання</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>За хобі та інтересами</h4>
+                    <ul class="footer-links">
+                        <li><a href="#interests" onclick="selectInterestCategory('athlete')">🏋️‍♂️ Для спортсмена</a>
+                        </li>
+                        <li><a href="#interests" onclick="selectInterestCategory('gamer')">🎮 Для геймера</a></li>
+                        <li><a href="#interests" onclick="selectInterestCategory('bookworm')">📚 Для книголюба</a></li>
+                        <li><a href="#interests" onclick="selectInterestCategory('cook')">🍳 Для кулінара</a></li>
+                        <li><a href="#interests" onclick="selectInterestCategory('traveler')">🧳 Для мандрівника</a>
+                        </li>
+                        <li><a href="#interests" onclick="selectInterestCategory('artist')">🎨 Для творчої людини</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Обрані подарунки</h4>
+                    <ul class="footer-links">
+                        <li><a href="#wishlist" style="color: #fda4af;">❤️ Моє Обране (<span
+                                    id="footerWishlistCount">0</span>)</a></li>
+                        <li><a href="#where-to-buy">Перевірені маркетплейси</a></li>
+                        <li><a href="#where-to-buy">Доставка по Україні</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Gift Designer. Усі права захищено. Безкоштовний підбір подарунків за вашими критеріями.
+                </p>
+                <button class="btn-scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">⬆️
+                    Нагору</button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
